@@ -1,2 +1,4 @@
 /.idea/
-/m1-generics/target/
+target
+/m2-enum/m2-enum.iml
+/m1-generics/m1-generics.iml

@@ -5,14 +5,14 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-
-        ArrayList<Integer> items = new ArrayList<Integer>();  //ArrayList only accepts objects belongs to Integer class
+        //ArrayList only accepts objects belongs to Integer class.We provide this by generics. If we do not use it and directly use ArrayList it accept all object types
+        ArrayList<Integer> items = new ArrayList<Integer>();
 
         items.add(1);
         items.add(2);
         items.add(3);
         items.add(4);
-//        items.add("Apple");
+//        items.add("Apple"); //We can not add because of <Integer> generic.
 
 
 

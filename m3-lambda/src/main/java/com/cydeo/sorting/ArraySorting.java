@@ -1,7 +1,4 @@
-package com.cydeo;
-
-import java.lang.reflect.Array;
-import java.util.function.Predicate;
+package com.cydeo.sorting;
 
 public class ArraySorting { //QuickSort,BubbleSort
 

@@ -17,6 +17,11 @@ public class AppleTest {
         List<Apple> heavyApple = filterApples(inventory, new AppleHeavyPredicate());
         System.out.println("heavyApple = " + heavyApple);
 
+        //Lambda way.
+        ApplePredicate weightApple= (Apple apple) -> apple.getWeight()>200;
+        filterApples(inventory, weightApple);
+        filterApples(inventory,apple -> apple.getWeight()>200);// we do it in one line. And we do not use type and pharantesis.
+
         List<Apple> greenApple = filterApples(inventory, new AppleGreenColorPredicate());
         System.out.println("greenApple = " + greenApple);
 

@@ -21,3 +21,7 @@ public class GenericsTest {
     }
 
 }
+
+    // Write a method that takes a list of students, prints each student and the total student count
+
+

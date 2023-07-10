@@ -50,7 +50,7 @@ public class GenericsTest {
         System.out.println(students.size());
     }
 
-    public static <T> void printInfo2(List<T> personList) {
+    public static <T extends Person> void printInfo2(List<T> personList) {
         for (T person : personList) {
             System.out.println(person);
         }

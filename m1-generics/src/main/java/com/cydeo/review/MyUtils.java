@@ -2,7 +2,7 @@ package com.cydeo.review;
 
 import java.util.List;
 
-public class MyUtils<T> {
+public class MyUtils<T extends Person> {
 
     //if we use class level generic, we can not implement it to static methods. Because it will change according to the object creating and static methods belongs to the class and does not change according to the object creating.
     public void printInfo2(List<T> list) {
@@ -15,5 +15,7 @@ public class MyUtils<T> {
     public T getLastItem(List<T> list) {
         return list.get(list.size() - 1);
     }
+
+
 
 }

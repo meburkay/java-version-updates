@@ -37,6 +37,8 @@ public class GenericsTest {
         obj2.printInfo2(teacherList);
         System.out.println(obj2.getLastItem(teacherList));
 
+        // MyUtils<String> obj3 = new MyUtils();  //By using inheritance at generic we restrict the T.
+
 
     }
 

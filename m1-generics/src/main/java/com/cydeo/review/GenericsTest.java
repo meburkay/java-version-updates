@@ -31,7 +31,7 @@ public class GenericsTest {
         obj1.printInfo2(studentList);
         System.out.println(obj1.getLastItem(studentList));
 
-//        obj1.printInfo2(teacherList); // Because we created the object as Student. We have to use all the generics with this object as Student. When we use class level it give us this inflexibility. But when we use it method level. It is more flexible. 
+//        obj1.printInfo2(teacherList); // Because we created the object as Student. We have to use all the generics with this object as Student. When we use class level it give us this inflexibility. But when we use it method level. It is more flexible. And you can use it with static methods.
 
         MyUtils<Teacher> obj2 = new MyUtils<>();
         obj2.printInfo2(teacherList);

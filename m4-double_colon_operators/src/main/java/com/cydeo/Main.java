@@ -1,6 +1,7 @@
 package com.cydeo;
 
 import java.util.function.BiFunction;
+import java.util.function.Consumer;
 import java.util.function.Function;
 
 public class Main {
@@ -33,5 +34,16 @@ public class Main {
         //If our functional interface have the class as a parameter, we do not need to create an object from that class. We can call it like static which is showed below.
         BiFunction<MyClass,Integer,Double> b1 = MyClass::method;
 
+
+        Consumer<Integer> display = i -> System.out.println(i);
+        Consumer<Integer> display2 = System.out::println;
+
+
+
+
+
+
     }
 }
+
+//At lambda expressions you do the implementation. Because of that you have to use the parameter. But when you are using method reference the implementation is ready inside that method. And because you define the interface as the type at the start of the line as the variable type you do not need to write it the second time.

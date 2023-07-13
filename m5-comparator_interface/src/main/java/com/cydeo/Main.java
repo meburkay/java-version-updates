@@ -23,5 +23,14 @@ public class Main {
 
         Collections.sort(list,((o1,o2) -> (o1>o2) ? -1 : (o1<o2) ? 1 : 0));
 
+        //Here we use directly list and as parameter we use lambda but as implementations we use ready method of Integer.
+        //Ascending order
+        list.sort((o1, o2) -> o1.compareTo(o2));
+        System.out.println(list);
+
+        //Descending order
+        list.sort((o2, o1) -> o1.compareTo(o2));
+        System.out.println(list);
+
     }
 }

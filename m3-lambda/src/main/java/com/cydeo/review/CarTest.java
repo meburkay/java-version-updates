@@ -15,7 +15,13 @@ public class CarTest {
         carList.add(new Car("Nissan", 150, 2018));
 
 //        System.out.println(filterFastCars(carList));
-        System.out.println(filterNewCars(carList));
+//        System.out.println(filterNewCars(carList));
+
+        System.out.println("Fast Cars:");
+        System.out.println(filter(carList, new CarFastPredicate()));
+
+        System.out.println("New Cars:");
+        System.out.println(filter(carList, new CarNewPredicate()));
 
     }
 
@@ -53,5 +59,21 @@ public class CarTest {
 
     //endregion
 
+    //With behaviour parameterization
+
+    //We create one method and only change the if condition in the for loop. We change it by sending the CarPredicate as a second parameter. According to our parameter the method change its behaviour.
+    private static List<Car> filter(List<Car> cars, CarPredicate carPredicate) {
+
+        List<Car> filteredCars = new ArrayList<>();
+
+        for (Car car : cars) {
+            if (carPredicate.test(car)) {//here we use behaviour parameterization.
+                filteredCars.add(car);
+            }
+        }
+
+        return filteredCars;
+
+    }
 
 }

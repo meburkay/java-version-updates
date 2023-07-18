@@ -17,12 +17,23 @@ public class CarTest {
 //        System.out.println(filterFastCars(carList));
 //        System.out.println(filterNewCars(carList));
 
+//        System.out.println("Fast Cars:");
+//        System.out.println(filter(carList, new CarFastPredicate()));
+//
+//        System.out.println("New Cars:");
+//        System.out.println(filter(carList, new CarNewPredicate()));
+
+        // Fat Arrow
+        // ->
+
+        //We can use lambda by assigning it to a functional interface variable or directly using as an argument which is functional interface parameter.
+        //We can not use lambda variables in another class.
+        CarPredicate fastCarPredicate = car -> car.getTopSpeed() > 160;
         System.out.println("Fast Cars:");
-        System.out.println(filter(carList, new CarFastPredicate()));
+        System.out.println(filter(carList, fastCarPredicate));
 
         System.out.println("New Cars:");
-        System.out.println(filter(carList, new CarNewPredicate()));
-
+        System.out.println(filter(carList, car -> car.getYear() > 2015));
     }
 
     //region Without Behaviour Parameterization

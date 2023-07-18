@@ -2,6 +2,7 @@ package com.cydeo.review;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class CarTest {
 
@@ -31,6 +32,8 @@ public class CarTest {
         CarPredicate fastCarPredicate = car -> car.getTopSpeed() > 160;
         System.out.println("Fast Cars:");
         System.out.println(filter(carList, fastCarPredicate));
+
+        Predicate<Car> fastCarPredicateWithReadyFunctionalInterface = car -> car.getTopSpeed() > 160;
 
         System.out.println("New Cars:");
         System.out.println(filter(carList, car -> car.getYear() > 2015));
@@ -79,6 +82,21 @@ public class CarTest {
 
         for (Car car : cars) {
             if (carPredicate.test(car)) {//here we use behaviour parameterization.
+                filteredCars.add(car);
+            }
+        }
+
+        return filteredCars;
+
+    }
+
+    //With ready Functional Interface
+    private static List<Car> filterReadyFunctionalInterface(List<Car> cars, Predicate<Car> predicate) {
+
+        List<Car> filteredCars = new ArrayList<>();
+
+        for (Car car : cars) {
+            if (predicate.test(car)) {
                 filteredCars.add(car);
             }
         }

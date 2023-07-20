@@ -1,5 +1,7 @@
 package com.cydeo;
 
+import com.cydeo.java9.FactoryMethodsDemo;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -32,6 +34,8 @@ public class OptionalDemo {//Optional is a final generic class, actually. It is 
         //orElse
         System.out.println(bigNumber.orElse(5));
 
+        //This line is for module system. We create module-info files and use m8's class here. The advantage of module system is when there is an error about the other module's data to compile warn us like using our own classes. At jar system we can see that at the runtime.
+        FactoryMethodsDemo f1 = new FactoryMethodsDemo();
 
     }
 }
